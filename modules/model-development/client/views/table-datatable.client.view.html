@@ -1,0 +1,27 @@
+<h3>Model Development
+
+</h3>
+
+<!-- ngRepeat + ngResource-->
+<div class="panel panel-default">
+   <div class="panel-heading">Find Dataset
+   </div>
+   <div class="panel-body">
+      <div ng-controller="DatasetController as table1">
+         <table datatable="ng" class="row-border hover">
+            <thead>
+               <tr>
+                  <th>Dataset ID</th>
+                  <th>Dataset Description</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr ng-repeat="person in table1.persons">
+                  <td>{{ person.id }}</td>
+                  <td>{{ person.firstName }}</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </div>
+</div>

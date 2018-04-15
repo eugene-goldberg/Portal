@@ -1,0 +1,6 @@
+Analytics:              modules/charts
+Cloud Insight Platform: modules/dashboard
+Decisioning:            modules/forms
+Deployment:             modules/tables
+Data Management:        modules/maps
+BI & Visualization:     modules/extras
