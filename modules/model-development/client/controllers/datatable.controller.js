@@ -23,7 +23,15 @@
             $scope.template.template_id = list.id;
             $scope.template.template_name = list.name;
             console.log("selected item:  " + list.name);
-            $window.open('https://www.google.com', '_blank');
+            if(list.name == "Python"){
+                $window.open('https://nbviewer.jupyter.org/github/ipython/ipython/blob/4.0.x/examples/Notebook/nbpackage/mynotebook.ipynb', '_blank');
+            }
+            if(list.name == "R"){
+                $window.open('https://hub.mybinder.org/user/binder-examples-r-ljqgwynb/notebooks/index.ipynb', '_blank');
+            }
+            if(list.name == "H2O"){
+                $window.open('https://github.com/h2oai/h2o-3/blob/master/h2o-py/demos/H2O_chicago_crimes.ipynb', '_blank');
+            }
         };
 
         activate();
