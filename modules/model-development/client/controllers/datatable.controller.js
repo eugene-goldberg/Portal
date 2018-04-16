@@ -10,9 +10,21 @@
         .module('app.charts')
         .controller('DatasetController', DataTableController);
 
-    DataTableController.$inject = ['$resource', 'DTOptionsBuilder', 'DTColumnDefBuilder'];
-    function DataTableController($resource, DTOptionsBuilder, DTColumnDefBuilder) {
+    DataTableController.$inject = ['$resource', 'DTOptionsBuilder', 'DTColumnDefBuilder','$scope','$window'];
+    function DataTableController($resource, DTOptionsBuilder, DTColumnDefBuilder, $scope, $window) {
         var vm = this;
+
+        $scope.templateList = [{id:1, name: 'H2O'}, {id:2, name: 'R'}, {id: 3, name: "Python"}];
+
+        $scope.selectedOption = $scope.templateList[1];
+
+        $scope.template = {};
+        $scope.setValue = function(list) {
+            $scope.template.template_id = list.id;
+            $scope.template.template_name = list.name;
+            console.log("selected item:  " + list.name);
+            $window.open('https://www.google.com', '_blank');
+        };
 
         activate();
 

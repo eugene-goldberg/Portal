@@ -13,12 +13,25 @@
                <tr>
                   <th>Dataset ID</th>
                   <th>Dataset Description</th>
+                 <th>Open With</th>
                </tr>
             </thead>
             <tbody>
                <tr ng-repeat="person in table1.persons">
                   <td>{{ person.id }}</td>
                   <td>{{ person.firstName }}</td>
+                 <td>
+                   <div uib-dropdown="dropdown" class="btn-group">
+                     <button uib-dropdown-toggle="" class="btn btn-default">Open With <b class="caret"></b>
+                     </button>
+                     <ul role="menu" class="dropdown-menu animated fadeIn">
+                       <li ng-repeat="list in templateList" ng-click="setValue(list)" data-ng-model="selectedOption"
+                       >{{list.name}}</li>
+                     </ul>
+                   </div>
+
+                 </td>
+
                </tr>
             </tbody>
          </table>
