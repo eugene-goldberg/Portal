@@ -24,10 +24,10 @@
             $scope.template.template_name = list.name;
             console.log("selected item:  " + list.name);
             if(list.name == "Python"){
-                $window.open('https://nbviewer.jupyter.org/github/ipython/ipython/blob/4.0.x/examples/Notebook/nbpackage/mynotebook.ipynb', '_blank');
+                $window.open('http://localhost:8888/notebooks/work/Untitled.ipynb?kernel_name=python3', '_blank');
             }
             if(list.name == "R"){
-                $window.open('https://hub.mybinder.org/user/binder-examples-r-ljqgwynb/notebooks/index.ipynb', '_blank');
+                $window.open('http://localhost:8888/notebooks/work/Untitled1.ipynb?kernel_name=ir', '_blank');
             }
             if(list.name == "H2O"){
                 $window.open('https://github.com/h2oai/h2o-3/blob/master/h2o-py/demos/H2O_chicago_crimes.ipynb', '_blank');
